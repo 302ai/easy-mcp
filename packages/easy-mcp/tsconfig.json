@@ -8,5 +8,10 @@
     "dist",
     "build",
     "node_modules"
-  ]
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@modelcontextprotocol/sdk/types": ["../../node_modules/@modelcontextprotocol/sdk/dist/esm/types.d.ts"]
+    }
+  }
 }

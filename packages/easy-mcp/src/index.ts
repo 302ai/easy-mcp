@@ -1,7 +1,9 @@
-console.log("Hello via Bun!");
+import _logger from "./core/logger";
+
+_logger.info("Hello, world!");
 
 // src/index.ts
 export function greet(name: string): string {
-  console.log("Hello,", name, "!");
+  _logger.info(`Hello, ${name}!`);
   return `Hello, ${name}!`;
 }
