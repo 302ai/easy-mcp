@@ -1,5 +1,11 @@
 # easy-mcp
 
+## 0.0.3
+
+### Patch Changes
+
+- c4f8bca: fix error
+
 ## 0.0.2
 
 ### Patch Changes
