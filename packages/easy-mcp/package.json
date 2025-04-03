@@ -1,0 +1,47 @@
+{
+  "name": "easy-mcp",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "bunup",
+    "build:watch": "bunup --watch",
+    "clean": "rm -rf dist",
+    "check": "biome check ./src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bunup": "^0.3.16"
+  },
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/302ai/easy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/302ai/easy-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/302ai/easy-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "302ai"
+  ],
+  "packageManager": "bun@1.2.8"
+}

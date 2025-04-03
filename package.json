@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "easy-mcp-repo",
+  "type": "module",
+  "scripts": {
+    "build": "turbo build",
+    "changeset": "changeset",
+    "clean": "turbo clean",
+    "dev": "turbo dev --no-cache  --concurrency 16 --continue",
+    "check": "turbo check",
+    "prepare": "husky install",
+    "ci:release": "turbo clean && turbo build && changeset publish",
+    "ci:version": "changeset version && bun run .github/scripts/cleanup-examples-changesets.ts && bun install"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.0.0-beta.1",
+    "@changesets/cli": "^2.28.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.5.0",
+    "turbo": "^2.4.5-canary.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "homepage": "https://github.com/302ai/easy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/302ai/easy-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/302ai/easy-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "302ai"
+  ],
+  "packageManager": "bun@1.2.8"
+}
